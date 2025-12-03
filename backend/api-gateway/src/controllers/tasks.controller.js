@@ -21,7 +21,7 @@ export const getAllTasks = async (req, res) => {
   try {
     const response = await httpClient.get(
       `${serviceUrls.TASK_SERVICE_URL}/task/getAllTask`
-      // `http://localhost:3000/getAllTask`
+      // `http://localhost:3000/task/getAllTask`
     );
 
     res.status(200).json(response.data);

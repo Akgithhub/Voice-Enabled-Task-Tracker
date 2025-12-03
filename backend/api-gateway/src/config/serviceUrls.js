@@ -1,5 +1,8 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 export default {
-  TASK_SERVICE_URL: process.env.TASK_SERVICE_URL || "http://localhost:3000",
-  // SPEECH_SERVICE_URL: process.env.SPEECH_SERVICE_URL || "http://localhost:5002",
-  // NLP_SERVICE_URL: process.env.NLP_SERVICE_URL || "http://localhost:5003"
+  TASK_SERVICE_URL: process.env.TASK_SERVICE_URL,
+  SPEECH_SERVICE_URL: process.env.SPEECH_SERVICE_URL,
+  // NLP_SERVICE_URL: process.env.NLP_SERVICE_URL"
 };

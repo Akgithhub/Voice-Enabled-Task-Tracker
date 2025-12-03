@@ -20,7 +20,7 @@ export const transcribeSpeech = async (req, res) => {
       }
     );
 
-    console.log("DEEPGRAM RAW:", JSON.stringify(response, null, 2));
+    // console.log("DEEPGRAM RAW:", JSON.stringify(response, null, 2));
 
     // Validate structure
     const transcript =
