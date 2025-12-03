@@ -34,8 +34,8 @@ const VoiceModal = ({ open, setOpen }) => {
         const payload = {
             title: parsed.title || transcript,
             description: parsed.description || "",
-            priority: parsed.priority || "Medium",
-            status: parsed.status || "To Do",
+            priority: parsed.priority || "medium",
+            status: parsed.status || "todo",
             dueDate: parsed.dueDate || "",
         };
 
