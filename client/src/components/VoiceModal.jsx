@@ -1,10 +1,9 @@
 import React, { useState, useContext } from "react";
-import { TaskContext } from "../context/TaskContext";
-import api from "../api/api";
+import { TaskContext } from "../context/TaskContext.jsx";
+import api from "../api.js";
 
 const VoiceModal = ({ open, setOpen }) => {
     const { createTask } = useContext(TaskContext);
-
     const [transcript, setTranscript] = useState("");
     const [parsed, setParsed] = useState(null);
 

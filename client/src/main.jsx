@@ -6,11 +6,11 @@ import './index.css'
 
 
 createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+  <>
     <TaskProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </TaskProvider>
-  </React.StrictMode>
+  </>
 )
