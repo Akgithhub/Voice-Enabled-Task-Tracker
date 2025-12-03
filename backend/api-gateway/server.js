@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import cors from 'cors'
 import tasksRoutes from "./src/routes/tasks.routes.js"
 import speechRoutes from "./src/routes/speech.routes.js"
+import nlpRoutes from "./src/routes/nlp.routes.js"
 import express from 'express'
 
 dotenv.config();
@@ -17,7 +18,7 @@ app.use(express.json());
 // gateway route
 app.use("/tasks", tasksRoutes);
 app.use("/speech", speechRoutes);
-// app.use("/nlp", nlpRoutes);
+app.use("/nlp", nlpRoutes);
 
 app.listen(PORT, () => {
   console.log(`API Gateway running on port ${PORT}`);
