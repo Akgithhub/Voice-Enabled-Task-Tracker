@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import React from 'react'
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import KanbanBoard from './components/KanbanBoard'
 import ListView from './components/ListView'
 import TaskModal from './components/TaskModal'
