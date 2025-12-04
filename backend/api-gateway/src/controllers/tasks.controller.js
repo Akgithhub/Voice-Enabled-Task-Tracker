@@ -17,7 +17,7 @@ export const createTask = async (req, res) => {
 };
 
 export const getAllTasks = async (req, res) => {
-  console.log("🔥 GATEWAY: Incoming request for /tasks");
+  // console.log("🔥 GATEWAY: Incoming request for /tasks");
   try {
     const response = await httpClient.get(
       `${serviceUrls.TASK_SERVICE_URL}/task/getAllTask`
