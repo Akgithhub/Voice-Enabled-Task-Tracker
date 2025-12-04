@@ -155,8 +155,8 @@ export const TaskProvider = ({ children }) => {
 
       return normalized;
     } catch (err) {
-      console.warn("POST /tasks/ct failed:", err.message);
-      console.log("Rolling back optimistic task.");
+      console.log("POST /tasks/ct failed:", err.message);
+      // console.log("Rolling back optimistic task.");
       setTasks((t) => t.filter((tk) => tk.id !== tempId));
       return null;
     }
@@ -184,10 +184,10 @@ export const TaskProvider = ({ children }) => {
       setTasks((t) =>
         t.map((tk) => {
           if (tk.id === id) {
-            console.log("Updating task locally:", {
-              before: tk,
-              after: { ...tk, ...patch },
-            });
+            // console.log("Updating task locally:", {
+            //   before: tk,
+            //   after: { ...tk, ...patch },
+            // });
           }
           return tk.id === id ? { ...tk, ...patch } : tk;
         })
@@ -198,14 +198,14 @@ export const TaskProvider = ({ children }) => {
       const res = await api.put(`/tasks/udt/${id}`, patch);
 
       if (res.data) {
-        console.log('Task Updated Successfully');
+        // console.log('Task Updated Successfully');
 
       }
 
     } catch (err) {
       console.warn("PUT /tasks/udt/:id failed:", err.message);
 
-      console.log("Rolling back to previous task list...");
+      // console.log("Rolling back to previous task list...");
       setTasks(prevTasks);
     }
   };
@@ -233,7 +233,7 @@ export const TaskProvider = ({ children }) => {
       // console.log(`Sending DELETE request to /tasks/delt/${id}`);
       const res = await api.delete(`/tasks/delt/${id}`);
       if (res.data) {
-        console.log('Delete successful');
+        // console.log('Delete successful');
 
       }
     } catch (err) {

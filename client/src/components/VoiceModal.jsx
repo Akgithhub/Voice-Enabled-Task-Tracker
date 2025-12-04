@@ -17,7 +17,7 @@ const VoiceModal = ({ open, setOpen }) => {
     // ----------------------------------------------------
     const startRecording = async () => {
         try {
-            console.log("Requesting audio permission...");
+            // console.log("Requesting audio permission...");
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 
             // Pick the best supported MIME type
@@ -39,7 +39,7 @@ const VoiceModal = ({ open, setOpen }) => {
             // IMPORTANT: define BEFORE .stop()
             recorder.onstop = async () => {
                 const blob = new Blob(chunks, { type: mimeType });
-                console.log("Final audio blob:", blob);
+                // console.log("Final audio blob:", blob);
 
                 await uploadAudioAndTranscribe(blob);
             };
